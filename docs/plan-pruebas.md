@@ -51,7 +51,7 @@ Definiciones en el [glosario de qa-templates](https://github.com/YaUriGarcia/qa-
 
 ## 5. Estrategia de ejecución
 
-1. Ejecutar los 10 casos con `standard_user` para establecer el comportamiento base.
+1. Ejecutar los 13 casos con `standard_user` para establecer el comportamiento base.
 2. Repetir los casos clave con `problem_user` y comparar las diferencias.
 3. Realizar una sesión exploratoria corta con `error_user` o `visual_user`.
 4. Reportar cada defecto como un Issue de GitHub con evidencia.
@@ -69,6 +69,7 @@ Definiciones en el [glosario de qa-templates](https://github.com/YaUriGarcia/qa-
 ## 7. Datos y herramientas
 
 - **Datos de prueba:** usuarios `standard_user`, `locked_out_user`, `problem_user`, `performance_glitch_user`, `error_user` y `visual_user`, todos con la contraseña pública `secret_sauce`.
+Nombre: `Ana`, Apellido: `Pérez` y Código postal: `55000`.
 - **CI/CD:** no aplica (pruebas manuales).
 - **Gestión de casos y defectos:** archivos Markdown de este repositorio y GitHub Issues.
 
