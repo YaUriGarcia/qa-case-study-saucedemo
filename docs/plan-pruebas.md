@@ -51,7 +51,7 @@ Definiciones en el [glosario de qa-templates](https://github.com/YaUriGarcia/qa-
 
 ## 5. Estrategia de ejecución
 
-1. Ejecutar los 13 casos con `standard_user` para establecer el comportamiento base.
+1. Ejecutar los 15 casos con `standard_user` para establecer el comportamiento base.
 2. Repetir los casos clave con `problem_user` y comparar las diferencias.
 3. Realizar una sesión exploratoria corta con `error_user` o `visual_user`.
 4. Reportar cada defecto como un Issue de GitHub con evidencia.
