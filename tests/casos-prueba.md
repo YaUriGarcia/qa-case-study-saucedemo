@@ -28,7 +28,7 @@
 
 1. Ingresar el usuario: `standard_user`.
 2. Ingresar la contraseña: `secret_sauce`.
-3. Hacer click en el botón **Login**.
+3. Hacer clic en el botón **Login**.
 
 **Resultado Esperado:**
 
@@ -167,12 +167,12 @@ antes del siguiente caso.
 | **¿Automatizable?** | Sí |
 | **Automatización** | [`login.spec.ts`](https://github.com/YaUriGarcia/playwright-e2e-saucedemo/blob/main/tests/login.spec.ts) |
 | **Precondiciones** | Sesión cerrada; página de login abierta en `https://www.saucedemo.com` |
-| **Datos de Prueba** | Usuario: `standard_user`/ Contraseña: vacio |
+| **Datos de Prueba** | Usuario: `standard_user`/ Contraseña: vacía |
 
 **Pasos:**
 
 1. Ingresar el usuario `standard_user`.
-2. Dejar el campo de contraseña vacío.
+2. Dejar el campo de contraseña vacía.
 3. Hacer clic en el botón **Login**.
 
 **Resultado Esperado:**
@@ -291,10 +291,10 @@ antes del siguiente caso.
 
 **Resultado Esperado:**
 
-- Los precios de los productos se muestran en orden ascendente (de menor a mayor). *(Ejemplo del estado actual (19/11/2026): empieza por la prenda infantil "Onesie" y termina en la "Fleece Jacket").*
+- Los precios de los productos se muestran en orden ascendente (de menor a mayor). *(Ejemplo del estado actual (19/11/2026): empieza por la prenda infantil "Onesie" y termina en la "Fleece Jacket").
 - El menú de ordenamiento se actualiza y muestra la opción **Price (low to high)** seleccionada.
 
-**Postcondiciones:** El usuario permanece en la página de `/inventory.html` y debe seleccionar el ordenamiento nuevamente a **Name (A to Z)** para el proximo caso.
+**Postcondiciones:** El usuario permanece en la página de `/inventory.html` y debe seleccionar el ordenamiento nuevamente a **Name (A to Z)** para el próximo caso.
 
 **Ejecución:**
 
@@ -329,7 +329,7 @@ antes del siguiente caso.
   *(Ejemplo del estado actual: empieza por la prenda "Test.allTheThings" y termina en la "Sauce Labs Backpack").*
 - El menú de ordenamiento se actualiza y muestra la opción **Name (Z to A)** seleccionada.
 
-**Postcondiciones:** El usuario permanece en la página de `/inventory.html` y debe seleccionar el ordenamiento nuevamente a **Name (A to Z)** para continuar con el proximo caso.
+**Postcondiciones:** El usuario permanece en la página de `/inventory.html` y debe seleccionar el ordenamiento nuevamente a **Name (A to Z)** para continuar con el próximo caso.
 
 **Ejecución:**
 
@@ -443,7 +443,7 @@ antes del siguiente caso.
 - Se muestra un mensaje de agradecimiento por el pedido.
 - Se muestra un botón para regresar al inicio.
 
-**Postcondiciones:** El usuario tiene que volver a agregar articulos al carrito y ingresar para el proximo caso.
+**Postcondiciones:**  El usuario tiene que iniciar sesión y volver a agregar artículos al carrito para el próximo caso.
 
 **Ejecución:**
 
@@ -470,16 +470,96 @@ antes del siguiente caso.
 **Pasos:**
 
 1. Hacer clic en el botón **Checkout**.
-2. Ingresar en **First Name:** 'Ana'.
-3. Dejar el campo de **Last Name** vacío'. 
-4. Ingresar en **Zip / Postal Code:** '55000'.
+2. Ingresar en **First Name:** `Ana`.
+3. Dejar el campo de **Last Name** vacío. 
+4. Ingresar en **Zip / Postal Code:** `55000`.
 5. Hacer clic en el botón **Continue**.
 
 
 **Resultado Esperado:**
 
 - No se finaliza el pedido.
-- Se muestra un mensaje de error indicando que el apellido es obligatorio.
+- Se muestra un mensaje de error indicando que el **apellido** es obligatorio.
+- El usuario permanece en la página de `/checkout-step-one.html`.
+
+
+**Postcondiciones:** El usuario permanece en la página de `/checkout-step-one.html` para el siguiente caso.
+
+**Ejecución:**
+
+| Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
+| :--- | :--- | :--- | :--- | :--- |
+| | Draft | N/A | | |
+
+---
+
+### TC-CHK-003 — Checkout con nombre vacío
+
+| Campo | Valor |
+| :--- | :--- |
+| **Módulo/Feature** | Checkout |
+| **Requisito asociado** | REQ-006 |
+| **Prioridad** | Media |
+| **Nivel** | E2E-UI |
+| **Tipo** | Functional |
+| **¿Automatizable?** | Sí |
+| **Automatización** | [`checkout.spec.ts`](https://github.com/YaUriGarcia/playwright-e2e-saucedemo/blob/main/tests/checkout.spec.ts) |
+| **Precondiciones** | Sesión iniciada con standard_user, un producto agregado y la página en `/cart.html` |
+| **Datos de Prueba** | Usuario: `standard_user` / Contraseña: `secret_sauce` |
+
+**Pasos:**
+
+1. Hacer clic en el botón **Checkout**.
+2. Dejar el campo de **First Name** vacío.
+3. Ingresar en **Last Name:** `Pérez` . 
+4. Ingresar en **Zip / Postal Code:** `55000`.
+5. Hacer clic en el botón **Continue**.
+
+
+**Resultado Esperado:**
+
+- No se finaliza el pedido.
+- Se muestra un mensaje de error indicando que el **nombre** es obligatorio.
+- El usuario permanece en la página de `/checkout-step-one.html`.
+
+
+**Postcondiciones:** El usuario permanece en la página de `/checkout-step-one.html` para el siguiente caso.
+
+**Ejecución:**
+
+| Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
+| :--- | :--- | :--- | :--- | :--- |
+| | Draft | N/A | | |
+
+---
+
+### TC-CHK-004 — Checkout con código postal vacío
+
+| Campo | Valor |
+| :--- | :--- |
+| **Módulo/Feature** | Checkout |
+| **Requisito asociado** | REQ-006 |
+| **Prioridad** | Media |
+| **Nivel** | E2E-UI |
+| **Tipo** | Functional |
+| **¿Automatizable?** | Sí |
+| **Automatización** | [`checkout.spec.ts`](https://github.com/YaUriGarcia/playwright-e2e-saucedemo/blob/main/tests/checkout.spec.ts) |
+| **Precondiciones** | Sesión iniciada con standard_user, un producto agregado y la página en `/cart.html` |
+| **Datos de Prueba** | Usuario: `standard_user` / Contraseña: `secret_sauce` |
+
+**Pasos:**
+
+1. Hacer clic en el botón **Checkout**.
+2. Ingresar en **First Name:** `Ana`.
+3. Ingresar en **Last Name:** `Pérez` . 
+4. Dejar el campo de **Zip / Postal Code:** vacío.
+5. Hacer clic en el botón **Continue**.
+
+
+**Resultado Esperado:**
+
+- No se finaliza el pedido.
+- Se muestra un mensaje de error indicando que el **código postal** es obligatorio.
 - El usuario permanece en la página de `/checkout-step-one.html`.
 
 
