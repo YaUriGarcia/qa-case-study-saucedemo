@@ -43,7 +43,7 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| Inicio de sesión exitoso, la URL cambia a: `/inventory.html` y se muestran los productos | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -70,7 +70,7 @@ antes del siguiente caso.
 **Resultado Esperado:**
 
 - No se inicia sesión.
-- Se muestra un mensaje de error indicando que el usuario está bloqueado (por ejemplo: "Sorry, this user has been locked out.").
+- Se muestra un mensaje de error indicando que el usuario está bloqueado.
 - El usuario permanece en la página de login y no se redirige a `/inventory.html`.
 
 **Postcondiciones:** Ninguna, el sistema permanece sin sesión iniciada y no requiere limpieza.
@@ -79,7 +79,7 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| No inicia sesión, se muestra el mensaje "Sorry, this user has been locked out.", el usuario permanece en el login. | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -115,7 +115,8 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| No se inicia sesión, se muestra el mensaje 'Username and password do not match any user in this service', 
+el usuario permanece en el login | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -151,7 +152,7 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| No se inicia sesión, se muestra el mensaje: 'Username is required', el usuario permanece en el login | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -187,7 +188,7 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| No se inicia sesión, se muestra el mensaje: 'Password is required', el usuario permanece en el login | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -223,7 +224,8 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| No se inicia sesión, se muestra el mensaje: 'Username and password do not match any user in this service', 
+el usuario permanece en el login | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -266,7 +268,8 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| Cada producto cuenta con imagen, nombre, descripción y precio diferente, se puede consultar el detalle y el detalle coincide con la lista, la URL se actualiza
+dependiendo del producto y al regresar vuelve a `/inventory.html` | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -300,7 +303,8 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| "El menú desplegable de ordenamiento abre correctamente, al seleccionar el ordenamiento se muestran los productos con menor precio empezando por 
+"Sauce Labs Onesie" y termina con el "Sauce Labs Fleece Jacket" | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
@@ -335,7 +339,8 @@ antes del siguiente caso.
 
 | Resultado Real | Estado | Defecto ID | Fecha | Ejecutado por |
 | :--- | :--- | :--- | :--- | :--- |
-| | Draft | N/A | | |
+| El menú desplegable de ordenamiento abre correctamente, al seleccionar el ordenamiento se muestran los productos por
+orden alfabetico empezando por 'Test.allTheThings() T-Shirt (Red) y termina en la "Sauce Labs Backpack' | Pass | N/A | 20/11/2026 | Yair Uriel García González |
 
 ---
 
